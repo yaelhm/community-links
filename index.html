@@ -12,7 +12,6 @@
       --text: #102033;
       --muted: #5f6f82;
       --border: #e5edf2;
-      --bg: #f7fbfc;
     }
 
     * { box-sizing: border-box; }
@@ -26,10 +25,7 @@
       color: var(--text);
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    a { text-decoration: none; color: inherit; }
 
     .page {
       max-width: 1180px;
@@ -111,9 +107,7 @@
       border: 1px solid var(--border);
     }
 
-    .btn:hover {
-      transform: translateY(-3px);
-    }
+    .btn:hover { transform: translateY(-3px); }
 
     .hero-art {
       min-height: 440px;
@@ -150,7 +144,6 @@
       background: #e8f7f7;
       display: grid;
       place-items: center;
-      color: var(--teal);
       font-size: 24px;
       margin-bottom: 14px;
     }
@@ -188,7 +181,7 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
 
@@ -231,9 +224,7 @@
       line-height: 1.35;
     }
 
-    .link:hover {
-      color: var(--teal);
-    }
+    .link:hover { color: var(--teal); }
 
     .share-knowledge {
       margin-top: 26px;
@@ -241,10 +232,10 @@
       border: 1px solid var(--border);
       border-radius: 24px;
       padding: 30px;
-      display: flex;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
       align-items: center;
-      justify-content: space-between;
-      gap: 20px;
       box-shadow: 0 18px 45px rgba(16, 40, 95, 0.06);
     }
 
@@ -257,6 +248,27 @@
       margin: 0;
       color: var(--muted);
       line-height: 1.6;
+    }
+
+    .resource-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .resource-btn {
+      padding: 14px 18px;
+      background: #f4f8fa;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      font-weight: 750;
+      color: var(--navy);
+      transition: 0.2s ease;
+    }
+
+    .resource-btn:hover {
+      transform: translateY(-2px);
+      color: var(--teal);
     }
 
     .about {
@@ -315,7 +327,8 @@
 
     @media (max-width: 900px) {
       .hero-inner,
-      .about {
+      .about,
+      .share-knowledge {
         grid-template-columns: 1fr;
         padding: 34px;
       }
@@ -325,13 +338,9 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .features {
-        margin: 24px 0 40px;
-      }
+      .features { margin: 24px 0 40px; }
 
-      .hero-art {
-        min-height: 300px;
-      }
+      .hero-art { min-height: 300px; }
     }
 
     @media (max-width: 560px) {
@@ -340,22 +349,11 @@
         grid-template-columns: 1fr;
       }
 
-      .share-knowledge {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      .hero-inner { padding: 26px; }
 
-      .hero-inner {
-        padding: 26px;
-      }
+      h1 { font-size: 44px; }
 
-      h1 {
-        font-size: 44px;
-      }
-
-      .logo {
-        width: 135px;
-      }
+      .logo { width: 135px; }
     }
   </style>
 </head>
@@ -379,12 +377,8 @@
           </p>
 
           <div class="buttons">
-            <a class="btn btn-primary" href="#community">
-              Join the Community
-            </a>
-            <a class="btn btn-secondary" href="#about">
-              Learn More
-            </a>
+            <a class="btn btn-primary" href="#community">Join the Community</a>
+            <a class="btn btn-secondary" href="#about">Learn More</a>
           </div>
         </div>
 
@@ -474,22 +468,9 @@
         <a class="link" href="https://chat.whatsapp.com/F4W9XZ7gXqL5rZDrEMVrlq" target="_blank">
           <span>AgriTech, FoodTech & GreenTech</span><span>→</span>
         </a>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">📈</div>
-        <h3>Business & Resources</h3>
 
         <a class="link" href="https://chat.whatsapp.com/KbPrRn8L8Pe9SZOlJb0OAL" target="_blank">
           <span>Finance & Economics</span><span>→</span>
-        </a>
-
-        <a class="link" href="https://docs.google.com/spreadsheets/d/1BeydhVKhAh1LN-ASYYWY3vNOkqwGQ2k3Kb2LaqODaEI/edit?usp=sharing" target="_blank">
-          <span>Community Resources</span><span>→</span>
-        </a>
-
-        <a class="link" href="profiles.html">
-          <span>Member Stories</span><span>→</span>
         </a>
       </div>
 
@@ -503,9 +484,19 @@
         </p>
       </div>
 
-      <a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSdt35nRklNd4L-zh-gmxBUXnP80G42D1WdPL_X-BeHOOQi9HA/viewform?usp=dialog" target="_blank">
-        Offer a Talk / Volunteer →
-      </a>
+      <div class="resource-links">
+        <a class="resource-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdt35nRklNd4L-zh-gmxBUXnP80G42D1WdPL_X-BeHOOQi9HA/viewform?usp=dialog" target="_blank">
+          Offer a Talk / Volunteer →
+        </a>
+
+        <a class="resource-btn" href="https://docs.google.com/spreadsheets/d/1BeydhVKhAh1LN-ASYYWY3vNOkqwGQ2k3Kb2LaqODaEI/edit?usp=sharing" target="_blank">
+          Community Resources →
+        </a>
+
+        <a class="resource-btn" href="profiles.html">
+          Member Stories →
+        </a>
+      </div>
     </section>
 
     <section class="about" id="about">
@@ -513,6 +504,7 @@
 
       <div>
         <h2>About Us</h2>
+
         <p>
           From PhD to Industry is a peer-led community created by researchers who understand the transition from academia to industry.
           We share real experiences, practical advice, job opportunities, and professional resources to help members take their next career step with confidence.
