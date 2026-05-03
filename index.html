@@ -9,16 +9,13 @@
     :root {
       --navy: #10285f;
       --teal: #008c8c;
-      --light: #f7fbfc;
       --text: #102033;
       --muted: #5f6f82;
-      --card: #ffffff;
       --border: #e5edf2;
+      --soft: #f7fbfc;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -27,10 +24,7 @@
       color: var(--text);
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    a { text-decoration: none; color: inherit; }
 
     .page {
       max-width: 1180px;
@@ -49,14 +43,15 @@
     .hero-inner {
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
-      gap: 30px;
+      gap: 34px;
       align-items: center;
       padding: 58px;
     }
 
     .logo {
-      width: 96px;
-      margin-bottom: 24px;
+      width: 155px;
+      margin-bottom: 26px;
+      border-radius: 24px;
     }
 
     h1 {
@@ -69,7 +64,7 @@
 
     .highlight {
       color: var(--teal);
-      font-weight: 700;
+      font-weight: 750;
       font-size: 22px;
       line-height: 1.5;
       margin-bottom: 18px;
@@ -92,7 +87,7 @@
     .btn {
       padding: 15px 24px;
       border-radius: 16px;
-      font-weight: 700;
+      font-weight: 750;
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -111,19 +106,17 @@
       border: 1px solid var(--border);
     }
 
-    .btn:hover {
-      transform: translateY(-3px);
-    }
+    .btn:hover { transform: translateY(-3px); }
 
     .hero-art {
-      min-height: 420px;
+      min-height: 440px;
       border-radius: 32px;
       background:
-        linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
-        url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=80");
+        linear-gradient(rgba(255,255,255,0.04), rgba(255,255,255,0.04)),
+        url("https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=1100&q=80");
       background-size: cover;
       background-position: center;
-      box-shadow: inset 0 0 80px rgba(255,255,255,0.35);
+      box-shadow: inset 0 0 80px rgba(255,255,255,0.28);
     }
 
     .features {
@@ -136,7 +129,7 @@
     }
 
     .feature {
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255, 255, 255, 0.96);
       border: 1px solid var(--border);
       border-radius: 22px;
       padding: 24px;
@@ -228,11 +221,10 @@
       border-top: 1px solid #eef3f6;
       color: #24364d;
       font-size: 15px;
+      line-height: 1.35;
     }
 
-    .link:hover {
-      color: var(--teal);
-    }
+    .link:hover { color: var(--teal); }
 
     .support {
       margin-top: 26px;
@@ -256,11 +248,12 @@
     }
 
     .about-img {
-      height: 310px;
+      height: 320px;
       border-radius: 28px;
-      background: url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=80");
+      background: url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1100&q=80");
       background-size: cover;
       background-position: center;
+      box-shadow: 0 18px 45px rgba(16, 40, 95, 0.08);
     }
 
     .about h2 {
@@ -295,48 +288,37 @@
       text-align: center;
       border-radius: 22px;
       padding: 22px;
-      font-weight: 700;
+      font-weight: 750;
     }
 
     @media (max-width: 900px) {
-      .hero-inner,
-      .about {
+      .hero-inner, .about {
         grid-template-columns: 1fr;
         padding: 34px;
       }
 
-      .features,
-      .cards {
+      .features, .cards {
         grid-template-columns: 1fr 1fr;
       }
 
-      .features {
-        margin: 24px 0 40px;
-      }
+      .features { margin: 24px 0 40px; }
 
-      .hero-art {
-        min-height: 300px;
-      }
+      .hero-art { min-height: 300px; }
     }
 
     @media (max-width: 560px) {
-      .features,
-      .cards {
-        grid-template-columns: 1fr;
-      }
+      .features, .cards { grid-template-columns: 1fr; }
 
       .support {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      .hero-inner {
-        padding: 26px;
-      }
+      .hero-inner { padding: 26px; }
 
-      h1 {
-        font-size: 44px;
-      }
+      h1 { font-size: 44px; }
+
+      .logo { width: 135px; }
     }
   </style>
 </head>
@@ -360,7 +342,7 @@
           </p>
 
           <div class="buttons">
-            <a class="btn btn-primary" href="https://chat.whatsapp.com/INa6K5HDMZhDeqWgQHLlSL?mode=hqrt2" target="_blank">
+            <a class="btn btn-primary" href="#community">
               Join the Community
             </a>
             <a class="btn btn-secondary" href="#about">
@@ -383,13 +365,13 @@
       <div class="feature">
         <div class="icon">💼</div>
         <h3>Industry Opportunities</h3>
-        <p>Find jobs, internships, collaborations, and career insights.</p>
+        <p>Find jobs, collaborations, and career insights.</p>
       </div>
 
       <div class="feature">
-        <div class="icon">📚</div>
-        <h3>Knowledge & Resources</h3>
-        <p>Curated tools and practical resources for career growth.</p>
+        <div class="icon">🔬</div>
+        <h3>Research to Impact</h3>
+        <p>Translate academic expertise into meaningful industry value.</p>
       </div>
 
       <div class="feature">
@@ -399,7 +381,7 @@
       </div>
     </section>
 
-    <section class="section-title">
+    <section class="section-title" id="community">
       <h2>Explore the Community</h2>
       <div class="line"></div>
     </section>
@@ -411,7 +393,7 @@
         <h3>Join the Community</h3>
 
         <a class="link" href="https://chat.whatsapp.com/INa6K5HDMZhDeqWgQHLlSL?mode=hqrt2" target="_blank">
-          <span>WhatsApp – General</span><span>→</span>
+          <span>WhatsApp – General Community</span><span>→</span>
         </a>
 
         <a class="link" href="https://chat.whatsapp.com/LCAb2He2jT995VRJWXc6uk" target="_blank">
@@ -424,38 +406,50 @@
       </div>
 
       <div class="card">
-        <div class="card-icon">🧭</div>
-        <h3>Professional Sub-Groups</h3>
+        <div class="card-icon">🧠</div>
+        <h3>Tech & Data</h3>
 
         <a class="link" href="https://chat.whatsapp.com/E2P5Kv7iToz3J6R8zFYDAg" target="_blank">
           <span>Data Science</span><span>→</span>
         </a>
 
-        <a class="link" href="https://chat.whatsapp.com/F4W9XZ7gXqL5rZDrEMVrlq" target="_blank">
-          <span>Agri / AgriTech</span><span>→</span>
+        <a class="link" href="https://chat.whatsapp.com/HTYMhFpLW808Prlmj9VQ1v" target="_blank">
+          <span>AI & ML</span><span>→</span>
         </a>
 
-        <a class="link" href="https://chat.whatsapp.com/F4CgLdFyqHtJrjQK76EIct" target="_blank">
-          <span>Biology / BioTech</span><span>→</span>
-        </a>
-
-        <a class="link" href="https://chat.whatsapp.com/L4YvsNsjjYs0GzRfpyUpgS" target="_blank">
-          <span>Neuroscience / Psychology</span><span>→</span>
+        <a class="link" href="https://chat.whatsapp.com/H0Ta7jGXkQTDJWnSRzb38J" target="_blank">
+          <span>Startups & Builders</span><span>→</span>
         </a>
       </div>
 
       <div class="card">
-        <div class="card-icon">📘</div>
-        <h3>Resources</h3>
+        <div class="card-icon">🔬</div>
+        <h3>Life Sciences</h3>
+
+        <a class="link" href="https://chat.whatsapp.com/F4CgLdFyqHtJrjQK76EIct" target="_blank">
+          <span>Biotech & Pharma</span><span>→</span>
+        </a>
+
+        <a class="link" href="https://chat.whatsapp.com/L4YvsNsjjYs0GzRfpyUpgS" target="_blank">
+          <span>Neuroscience & Psychology</span><span>→</span>
+        </a>
+
+        <a class="link" href="https://chat.whatsapp.com/F4W9XZ7gXqL5rZDrEMVrlq" target="_blank">
+          <span>AgriTech, FoodTech & GreenTech</span><span>→</span>
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <h3>Business & Resources</h3>
+
+        <a class="link" href="https://chat.whatsapp.com/KbPrRn8L8Pe9SZOlJb0OAL" target="_blank">
+          <span>Finance & Economics</span><span>→</span>
+        </a>
 
         <a class="link" href="https://docs.google.com/spreadsheets/d/1BeydhVKhAh1LN-ASYYWY3vNOkqwGQ2k3Kb2LaqODaEI/edit?usp=sharing" target="_blank">
           <span>Community Resources</span><span>→</span>
         </a>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">✨</div>
-        <h3>Community Profiles</h3>
 
         <a class="link" href="#" style="opacity:0.55; pointer-events:none;">
           <span>Member Profiles – Coming Soon</span><span>🔒</span>
@@ -473,7 +467,7 @@
       </div>
 
       <a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSdt35nRklNd4L-zh-gmxBUXnP80G42D1WdPL_X-BeHOOQi9HA/viewform?usp=dialog" target="_blank">
-        Contribute / Donate →
+        Contribute / Volunteer →
       </a>
     </section>
 
@@ -494,7 +488,7 @@
           </div>
 
           <div class="stat">
-            <strong>4+</strong>
+            <strong>7+</strong>
             Sub-Groups
           </div>
 
